@@ -1,0 +1,24 @@
+simplePairwise
+#
+A,Ludo,Trivial,Checkers,Chess
+B,Dice,null
+C,Person,Computer
+D,2,3
+E,Visa,Master Card,American Express
+F,Quiz,-
+#
+{Ludo,Dice,Person,2,Visa,Quiz}
+{Ludo,Dice,Computer,2,American Express,-}
+{Ludo,null,Computer,3,Master Card,-}
+{Trivial,Dice,Person,3,Master Card,Quiz}
+{Trivial,Dice,Computer,2,American Express,Quiz}
+{Trivial,null,Person,2,Visa,-}
+{Checkers,Dice,Person,2,Master Card,-}
+{Checkers,Dice,Person,2,American Express,Quiz}
+{Checkers,null,Computer,3,Visa,Quiz}
+{Chess,Dice,Person,2,Visa,Quiz}
+{Chess,Dice,Person,2,Master Card,Quiz}
+{Chess,Dice,Person,2,American Express,Quiz}
+{Chess,null,Computer,3,American Express,-}
+@
+Results for a maximum of 9289728 combinations

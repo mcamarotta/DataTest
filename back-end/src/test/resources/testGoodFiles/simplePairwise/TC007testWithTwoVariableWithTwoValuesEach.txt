@@ -1,0 +1,12 @@
+simplePairwise
+#
+A,valueA1, valueA2
+B,Boat, GrandBoat
+#
+{valueA1,Boat}  
+{valueA1,GrandBoat}  
+{valueA2,Boat}  
+{valueA2,GrandBoat}
+@
+Results for a maximum of 9289728 combinations 
+

@@ -1,0 +1,6 @@
+simplePairwise
+#
+A,valueA1
+#
+{valueA1}
+

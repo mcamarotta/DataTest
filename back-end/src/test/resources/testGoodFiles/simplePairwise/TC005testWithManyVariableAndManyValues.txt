@@ -1,0 +1,69 @@
+simplePairwise
+#
+Color,White,Green,Yellow,Black
+Car Brand,BMW,Mercedez,Volkswagen,KIA
+Country,Uruguay,Brasil,Argentina,Spain
+Continent,Asia,South America,North America,Europe,Africa,Oceanian
+Credit Card, Visa, Master card, American express
+Capital, Montevideo, Brasilia, Buenos Aires, Madrid
+Languages, Spanish,Portuguese,English,French
+University,Udelar,UFRJ,UCU,UCA,ORT,UFRS,UCLM
+Ocean,Atlantic,Pacific,Indic
+Great Place, Rambla de Montevideo, Chapada da Diamantina, Valle de la Luna, Cataratas del Iguazu
+WithOneValue,value1
+WithTwoValue,value11,value22
+WithThreeValue,value111,value222,value333
+WithOneValueAgain,value1111
+#
+{White,BMW,Uruguay,Asia,Visa,Montevideo,Spanish,Udelar,Atlantic,Rambla de Montevideo,value1,value11,value111,value1111}  
+{White,BMW,Uruguay,Asia,Visa,Montevideo,Portuguese,UCU,Atlantic,Rambla de Montevideo,value1,value11,value111,value1111}  
+{White,BMW,Uruguay,Asia,Visa,Montevideo,English,ORT,Atlantic,Cataratas del Iguazu,value1,value11,value111,value1111}  
+{White,BMW,Uruguay,Asia,Visa,Madrid,French,Udelar,Atlantic,Valle de la Luna,value1,value11,value111,value1111}  
+{White,BMW,Uruguay,South America,Visa,Montevideo,Spanish,UCA,Indic,Valle de la Luna,value1,value11,value111,value1111}  
+{White,BMW,Uruguay,South America,Visa,Montevideo,Spanish,UCLM,Atlantic,Cataratas del Iguazu,value1,value11,value111,value1111}  
+{White,BMW,Uruguay,North America,Visa,Montevideo,Spanish,UFRS,Atlantic,Rambla de Montevideo,value1,value11,value111,value1111}  
+{White,BMW,Uruguay,Europe,Visa,Montevideo,Spanish,Udelar,Atlantic,Chapada da Diamantina,value1,value11,value111,value1111}  
+{White,BMW,Uruguay,Europe,Visa,Montevideo,Spanish,UCLM,Atlantic,Rambla de Montevideo,value1,value11,value111,value1111}  
+{White,BMW,Uruguay,Africa,Visa,Montevideo,Spanish,ORT,Atlantic,Rambla de Montevideo,value1,value11,value111,value1111}  
+{White,BMW,Uruguay,Africa,Visa,Buenos Aires,Spanish,Udelar,Atlantic,Chapada da Diamantina,value1,value11,value111,value1111}  
+{White,BMW,Uruguay,Oceanian,Visa,Montevideo,Spanish,UCU,Atlantic,Rambla de Montevideo,value1,value11,value111,value1111}  
+{White,BMW,Uruguay,Oceanian,Visa,Montevideo,Spanish,ORT,Atlantic,Rambla de Montevideo,value1,value11,value111,value1111}  
+{White,BMW,Uruguay,Oceanian,American express,Brasilia,French,UFRS,Atlantic,Valle de la Luna,value1,value22,value222,value1111}  
+{White,BMW,Argentina,Europe,Visa,Brasilia,English,UCA,Atlantic,Rambla de Montevideo,value1,value11,value111,value1111}  
+{White,BMW,Spain,North America,Visa,Brasilia,French,UCU,Atlantic,Cataratas del Iguazu,value1,value11,value111,value1111}  
+{White,BMW,Spain,Oceanian,Visa,Montevideo,Spanish,UFRJ,Indic,Rambla de Montevideo,value1,value11,value333,value1111}  
+{White,Mercedez,Uruguay,South America,Master card,Buenos Aires,French,UCA,Atlantic,Chapada da Diamantina,value1,value11,value111,value1111}  
+{White,Mercedez,Brasil,South America,Master card,Brasilia,Portuguese,UFRJ,Pacific,Chapada da Diamantina,value1,value22,value222,value1111}  
+{White,Volkswagen,Uruguay,Europe,Visa,Montevideo,Spanish,UFRJ,Atlantic,Rambla de Montevideo,value1,value11,value111,value1111}  
+{White,Volkswagen,Brasil,Europe,Master card,Madrid,French,ORT,Pacific,Valle de la Luna,value1,value22,value111,value1111}  
+{White,Volkswagen,Argentina,North America,American express,Buenos Aires,English,UCU,Indic,Valle de la Luna,value1,value11,value333,value1111}  
+{White,KIA,Uruguay,Asia,Visa,Montevideo,Spanish,UFRJ,Atlantic,Rambla de Montevideo,value1,value11,value111,value1111}  
+{White,KIA,Argentina,South America,Visa,Montevideo,Spanish,UFRS,Atlantic,Rambla de Montevideo,value1,value11,value111,value1111}  
+{White,KIA,Spain,Africa,Visa,Montevideo,Spanish,UCA,Atlantic,Rambla de Montevideo,value1,value11,value111,value1111}  
+{White,KIA,Spain,Africa,Visa,Madrid,Portuguese,UCLM,Atlantic,Valle de la Luna,value1,value11,value111,value1111}  
+{Green,BMW,Uruguay,Asia,Visa,Montevideo,Spanish,Udelar,Atlantic,Valle de la Luna,value1,value11,value111,value1111}  
+{Green,BMW,Uruguay,North America,Visa,Buenos Aires,English,UFRJ,Atlantic,Cataratas del Iguazu,value1,value11,value333,value1111}  
+{Green,BMW,Brasil,North America,Visa,Madrid,French,UCA,Pacific,Cataratas del Iguazu,value1,value22,value333,value1111}  
+{Green,BMW,Brasil,Africa,American express,Brasilia,Spanish,UCLM,Indic,Chapada da Diamantina,value1,value11,value333,value1111}  
+{Green,Mercedez,Uruguay,Europe,American express,Montevideo,Portuguese,ORT,Indic,Rambla de Montevideo,value1,value11,value333,value1111}  
+{Green,Mercedez,Brasil,Asia,Visa,Montevideo,Portuguese,UFRS,Atlantic,Chapada da Diamantina,value1,value11,value222,value1111}  
+{Green,Mercedez,Brasil,Oceanian,Visa,Buenos Aires,English,UCLM,Pacific,Rambla de Montevideo,value1,value11,value111,value1111}  
+{Green,Volkswagen,Spain,South America,Master card,Montevideo,English,Udelar,Atlantic,Cataratas del Iguazu,value1,value22,value222,value1111}  
+{Green,KIA,Argentina,Asia,Master card,Brasilia,Spanish,UCU,Indic,Chapada da Diamantina,value1,value22,value333,value1111}  
+{Yellow,BMW,Uruguay,North America,Master card,Montevideo,Portuguese,UCLM,Atlantic,Chapada da Diamantina,value1,value22,value222,value1111}  
+{Yellow,BMW,Argentina,South America,Visa,Brasilia,English,ORT,Atlantic,Chapada da Diamantina,value1,value11,value222,value1111}  
+{Yellow,Mercedez,Uruguay,Africa,Visa,Buenos Aires,Spanish,UCU,Atlantic,Cataratas del Iguazu,value1,value11,value111,value1111}  
+{Yellow,Mercedez,Brasil,North America,American express,Brasilia,Spanish,Udelar,Pacific,Rambla de Montevideo,value1,value11,value111,value1111}  
+{Yellow,Mercedez,Spain,Asia,American express,Madrid,Spanish,UFRJ,Pacific,Valle de la Luna,value1,value11,value111,value1111}  
+{Yellow,Volkswagen,Uruguay,Africa,Master card,Madrid,English,UFRS,Pacific,Rambla de Montevideo,value1,value11,value333,value1111}  
+{Yellow,Volkswagen,Argentina,Oceanian,Visa,Madrid,Spanish,UCA,Indic,Chapada da Diamantina,value1,value11,value222,value1111}  
+{Yellow,KIA,Brasil,Europe,Visa,Montevideo,French,UCU,Indic,Valle de la Luna,value1,value22,value222,value1111}  
+{Black,BMW,Spain,Europe,Master card,Buenos Aires,Spanish,UFRS,Indic,Cataratas del Iguazu,value1,value22,value111,value1111}  
+{Black,Mercedez,Argentina,Africa,Visa,Montevideo,French,UFRJ,Pacific,Rambla de Montevideo,value1,value22,value222,value1111}  
+{Black,Volkswagen,Brasil,Asia,American express,Brasilia,Portuguese,UCA,Atlantic,Cataratas del Iguazu,value1,value11,value111,value1111}  
+{Black,Volkswagen,Argentina,Asia,Visa,Buenos Aires,French,UCLM,Atlantic,Valle de la Luna,value1,value11,value111,value1111}  
+{Black,KIA,Uruguay,South America,American express,Madrid,English,UCU,Pacific,Rambla de Montevideo,value1,value11,value333,value1111}  
+{Black,KIA,Argentina,Oceanian,Master card,Buenos Aires,Portuguese,Udelar,Indic,Cataratas del Iguazu,value1,value11,value333,value1111}  
+{Black,KIA,Spain,North America,Visa,Buenos Aires,Spanish,ORT,Atlantic,Chapada da Diamantina,value1,value11,value222,value1111} 
+@
+Results for a maximum of 9289728 combinations

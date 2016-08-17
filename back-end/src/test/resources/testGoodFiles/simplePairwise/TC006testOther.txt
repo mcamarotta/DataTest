@@ -1,0 +1,39 @@
+simplePairwise
+#
+Color,White,Green,Yellow,Black
+Car Brand,BMW,Mercedez,Volkswagen,KIA
+Country,Uruguay,Brasil,Argentina
+Continent,Asia,South America
+Capital, Montevideo, Brasilia
+Languages, Spanish,Portuguese,English,French
+University,Udelar,UFRJ,UCU,UCA,ORT
+#
+{White,BMW,Uruguay,Asia,Montevideo,Spanish,Udelar}
+{White,BMW,Uruguay,Asia,Montevideo,English,UFRJ}
+{White,BMW,Uruguay,Asia,Brasilia,Spanish,Udelar}
+{White,BMW,Brasil,Asia,Montevideo,Spanish,UCU}
+{White,BMW,Argentina,Asia,Montevideo,Spanish,Udelar}
+{White,Mercedez,Brasil,South America,Brasilia,Portuguese,UFRJ}
+{White,Mercedez,Argentina,Asia,Montevideo,Spanish,UCA}
+{White,Volkswagen,Brasil,Asia,Brasilia,French,ORT}
+{White,Volkswagen,Argentina,Asia,Brasilia,English,UCU}
+{White,KIA,Uruguay,Asia,Montevideo,Spanish,UCA}
+{White,KIA,Uruguay,Asia,Montevideo,Portuguese,UFRJ}
+{Green,BMW,Brasil,Asia,Montevideo,French,UCA}
+{Green,BMW,Argentina,Asia,Montevideo,Portuguese,UFRJ}
+{Green,Mercedez,Uruguay,Asia,Montevideo,English,ORT}
+{Green,Volkswagen,Uruguay,South America,Montevideo,Spanish,Udelar}
+{Green,KIA,Argentina,South America,Brasilia,French,UCU}
+{Yellow,BMW,Uruguay,Asia,Montevideo,Portuguese,UCU}
+{Yellow,BMW,Argentina,South America,Montevideo,Portuguese,ORT}
+{Yellow,Mercedez,Uruguay,Asia,Brasilia,French,Udelar}
+{Yellow,Volkswagen,Uruguay,Asia,Montevideo,Portuguese,UCA}
+{Yellow,Volkswagen,Brasil,Asia,Montevideo,Spanish,UFRJ}
+{Yellow,KIA,Brasil,Asia,Montevideo,English,Udelar}
+{Black,BMW,Uruguay,Asia,Montevideo,French,UFRJ}
+{Black,BMW,Uruguay,South America,Brasilia,English,UCA}
+{Black,Mercedez,Argentina,Asia,Montevideo,Spanish,UCU}
+{Black,Volkswagen,Brasil,Asia,Montevideo,Portuguese,Udelar}
+{Black,KIA,Uruguay,Asia,Montevideo,Spanish,ORT}
+@
+Results for a maximum of 3840 combinations

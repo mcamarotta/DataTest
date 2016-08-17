@@ -1,0 +1,15 @@
+eachChoice
+#
+A,Ludo,Trivial,Checkers,Chess
+B,Dice,null
+C,Person,Computer
+D,2,3
+E,Visa,Master card,American express
+F,Quiz,-
+#
+{Ludo,Dice,Person,2,Visa,Quiz}
+{Trivial,null,Computer,3,Master card,-}
+{Checkers,Dice,Person,3,American express,Quiz}
+{Chess,null,Computer,2,Master card,Quiz}
+@
+Results for a maximum of 192 combinations

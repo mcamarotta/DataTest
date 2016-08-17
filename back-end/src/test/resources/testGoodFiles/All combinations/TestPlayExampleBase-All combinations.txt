@@ -1,0 +1,203 @@
+allCombinations
+#
+A,Ludo,Trivial,Checkers,Chess
+B,Dice,null
+C,Person,Computer
+D,2,3
+E,Visa,Master card,American express
+F,Quiz,-
+#
+{Ludo,Dice,Person,2,Visa,Quiz}  
+{Ludo,Dice,Person,2,Visa,-}  
+{Ludo,Dice,Person,2,Master card,Quiz}  
+{Ludo,Dice,Person,2,Master card,-}  
+{Ludo,Dice,Person,2,American express,Quiz}  
+{Ludo,Dice,Person,2,American express,-}  
+{Ludo,Dice,Person,3,Visa,Quiz}  
+{Ludo,Dice,Person,3,Visa,-}  
+{Ludo,Dice,Person,3,Master card,Quiz}  
+{Ludo,Dice,Person,3,Master card,-}  
+{Ludo,Dice,Person,3,American express,Quiz}  
+{Ludo,Dice,Person,3,American express,-}  
+{Ludo,Dice,Computer,2,Visa,Quiz}  
+{Ludo,Dice,Computer,2,Visa,-}  
+{Ludo,Dice,Computer,2,Master card,Quiz}  
+{Ludo,Dice,Computer,2,Master card,-}  
+{Ludo,Dice,Computer,2,American express,Quiz}  
+{Ludo,Dice,Computer,2,American express,-}  
+{Ludo,Dice,Computer,3,Visa,Quiz}  
+{Ludo,Dice,Computer,3,Visa,-}  
+{Ludo,Dice,Computer,3,Master card,Quiz}  
+{Ludo,Dice,Computer,3,Master card,-}  
+{Ludo,Dice,Computer,3,American express,Quiz}  
+{Ludo,Dice,Computer,3,American express,-}  
+{Ludo,null,Person,2,Visa,Quiz}  
+{Ludo,null,Person,2,Visa,-}  
+{Ludo,null,Person,2,Master card,Quiz}  
+{Ludo,null,Person,2,Master card,-}  
+{Ludo,null,Person,2,American express,Quiz}  
+{Ludo,null,Person,2,American express,-}  
+{Ludo,null,Person,3,Visa,Quiz}  
+{Ludo,null,Person,3,Visa,-}  
+{Ludo,null,Person,3,Master card,Quiz}  
+{Ludo,null,Person,3,Master card,-}  
+{Ludo,null,Person,3,American express,Quiz}  
+{Ludo,null,Person,3,American express,-}  
+{Ludo,null,Computer,2,Visa,Quiz}  
+{Ludo,null,Computer,2,Visa,-}  
+{Ludo,null,Computer,2,Master card,Quiz}  
+{Ludo,null,Computer,2,Master card,-}  
+{Ludo,null,Computer,2,American express,Quiz}  
+{Ludo,null,Computer,2,American express,-}  
+{Ludo,null,Computer,3,Visa,Quiz}  
+{Ludo,null,Computer,3,Visa,-}  
+{Ludo,null,Computer,3,Master card,Quiz}  
+{Ludo,null,Computer,3,Master card,-}  
+{Ludo,null,Computer,3,American express,Quiz}  
+{Ludo,null,Computer,3,American express,-}  
+{Trivial,Dice,Person,2,Visa,Quiz}  
+{Trivial,Dice,Person,2,Visa,-}  
+{Trivial,Dice,Person,2,Master card,Quiz}  
+{Trivial,Dice,Person,2,Master card,-}  
+{Trivial,Dice,Person,2,American express,Quiz}  
+{Trivial,Dice,Person,2,American express,-}  
+{Trivial,Dice,Person,3,Visa,Quiz}  
+{Trivial,Dice,Person,3,Visa,-}  
+{Trivial,Dice,Person,3,Master card,Quiz}  
+{Trivial,Dice,Person,3,Master card,-}  
+{Trivial,Dice,Person,3,American express,Quiz}  
+{Trivial,Dice,Person,3,American express,-}  
+{Trivial,Dice,Computer,2,Visa,Quiz}  
+{Trivial,Dice,Computer,2,Visa,-}  
+{Trivial,Dice,Computer,2,Master card,Quiz}  
+{Trivial,Dice,Computer,2,Master card,-}  
+{Trivial,Dice,Computer,2,American express,Quiz}  
+{Trivial,Dice,Computer,2,American express,-}  
+{Trivial,Dice,Computer,3,Visa,Quiz}  
+{Trivial,Dice,Computer,3,Visa,-}  
+{Trivial,Dice,Computer,3,Master card,Quiz}  
+{Trivial,Dice,Computer,3,Master card,-}  
+{Trivial,Dice,Computer,3,American express,Quiz}  
+{Trivial,Dice,Computer,3,American express,-}  
+{Trivial,null,Person,2,Visa,Quiz}  
+{Trivial,null,Person,2,Visa,-}  
+{Trivial,null,Person,2,Master card,Quiz}  
+{Trivial,null,Person,2,Master card,-}  
+{Trivial,null,Person,2,American express,Quiz}  
+{Trivial,null,Person,2,American express,-}  
+{Trivial,null,Person,3,Visa,Quiz}  
+{Trivial,null,Person,3,Visa,-}  
+{Trivial,null,Person,3,Master card,Quiz}  
+{Trivial,null,Person,3,Master card,-}  
+{Trivial,null,Person,3,American express,Quiz}  
+{Trivial,null,Person,3,American express,-}  
+{Trivial,null,Computer,2,Visa,Quiz}  
+{Trivial,null,Computer,2,Visa,-}  
+{Trivial,null,Computer,2,Master card,Quiz}  
+{Trivial,null,Computer,2,Master card,-}  
+{Trivial,null,Computer,2,American express,Quiz}  
+{Trivial,null,Computer,2,American express,-}  
+{Trivial,null,Computer,3,Visa,Quiz}  
+{Trivial,null,Computer,3,Visa,-}  
+{Trivial,null,Computer,3,Master card,Quiz}  
+{Trivial,null,Computer,3,Master card,-}  
+{Trivial,null,Computer,3,American express,Quiz}  
+{Trivial,null,Computer,3,American express,-}  
+{Checkers,Dice,Person,2,Visa,Quiz}  
+{Checkers,Dice,Person,2,Visa,-}  
+{Checkers,Dice,Person,2,Master card,Quiz}  
+{Checkers,Dice,Person,2,Master card,-}  
+{Checkers,Dice,Person,2,American express,Quiz}  
+{Checkers,Dice,Person,2,American express,-}  
+{Checkers,Dice,Person,3,Visa,Quiz}  
+{Checkers,Dice,Person,3,Visa,-}  
+{Checkers,Dice,Person,3,Master card,Quiz}  
+{Checkers,Dice,Person,3,Master card,-}  
+{Checkers,Dice,Person,3,American express,Quiz}  
+{Checkers,Dice,Person,3,American express,-}  
+{Checkers,Dice,Computer,2,Visa,Quiz}  
+{Checkers,Dice,Computer,2,Visa,-}  
+{Checkers,Dice,Computer,2,Master card,Quiz}  
+{Checkers,Dice,Computer,2,Master card,-}  
+{Checkers,Dice,Computer,2,American express,Quiz}  
+{Checkers,Dice,Computer,2,American express,-}  
+{Checkers,Dice,Computer,3,Visa,Quiz}  
+{Checkers,Dice,Computer,3,Visa,-}  
+{Checkers,Dice,Computer,3,Master card,Quiz}  
+{Checkers,Dice,Computer,3,Master card,-}  
+{Checkers,Dice,Computer,3,American express,Quiz}  
+{Checkers,Dice,Computer,3,American express,-}  
+{Checkers,null,Person,2,Visa,Quiz}  
+{Checkers,null,Person,2,Visa,-}  
+{Checkers,null,Person,2,Master card,Quiz}  
+{Checkers,null,Person,2,Master card,-}  
+{Checkers,null,Person,2,American express,Quiz}  
+{Checkers,null,Person,2,American express,-}  
+{Checkers,null,Person,3,Visa,Quiz}  
+{Checkers,null,Person,3,Visa,-}  
+{Checkers,null,Person,3,Master card,Quiz}  
+{Checkers,null,Person,3,Master card,-}  
+{Checkers,null,Person,3,American express,Quiz}  
+{Checkers,null,Person,3,American express,-}  
+{Checkers,null,Computer,2,Visa,Quiz}  
+{Checkers,null,Computer,2,Visa,-}  
+{Checkers,null,Computer,2,Master card,Quiz}  
+{Checkers,null,Computer,2,Master card,-}  
+{Checkers,null,Computer,2,American express,Quiz}  
+{Checkers,null,Computer,2,American express,-}  
+{Checkers,null,Computer,3,Visa,Quiz}  
+{Checkers,null,Computer,3,Visa,-}  
+{Checkers,null,Computer,3,Master card,Quiz}  
+{Checkers,null,Computer,3,Master card,-}  
+{Checkers,null,Computer,3,American express,Quiz}  
+{Checkers,null,Computer,3,American express,-}  
+{Chess,Dice,Person,2,Visa,Quiz}  
+{Chess,Dice,Person,2,Visa,-}  
+{Chess,Dice,Person,2,Master card,Quiz}  
+{Chess,Dice,Person,2,Master card,-}  
+{Chess,Dice,Person,2,American express,Quiz}  
+{Chess,Dice,Person,2,American express,-}  
+{Chess,Dice,Person,3,Visa,Quiz}  
+{Chess,Dice,Person,3,Visa,-}  
+{Chess,Dice,Person,3,Master card,Quiz}  
+{Chess,Dice,Person,3,Master card,-}  
+{Chess,Dice,Person,3,American express,Quiz}  
+{Chess,Dice,Person,3,American express,-}  
+{Chess,Dice,Computer,2,Visa,Quiz}  
+{Chess,Dice,Computer,2,Visa,-}  
+{Chess,Dice,Computer,2,Master card,Quiz}  
+{Chess,Dice,Computer,2,Master card,-}  
+{Chess,Dice,Computer,2,American express,Quiz}  
+{Chess,Dice,Computer,2,American express,-}  
+{Chess,Dice,Computer,3,Visa,Quiz}  
+{Chess,Dice,Computer,3,Visa,-}  
+{Chess,Dice,Computer,3,Master card,Quiz}  
+{Chess,Dice,Computer,3,Master card,-}  
+{Chess,Dice,Computer,3,American express,Quiz}  
+{Chess,Dice,Computer,3,American express,-}  
+{Chess,null,Person,2,Visa,Quiz}  
+{Chess,null,Person,2,Visa,-}  
+{Chess,null,Person,2,Master card,Quiz}  
+{Chess,null,Person,2,Master card,-}  
+{Chess,null,Person,2,American express,Quiz}  
+{Chess,null,Person,2,American express,-}  
+{Chess,null,Person,3,Visa,Quiz}  
+{Chess,null,Person,3,Visa,-}  
+{Chess,null,Person,3,Master card,Quiz}  
+{Chess,null,Person,3,Master card,-}  
+{Chess,null,Person,3,American express,Quiz}  
+{Chess,null,Person,3,American express,-}  
+{Chess,null,Computer,2,Visa,Quiz}  
+{Chess,null,Computer,2,Visa,-}  
+{Chess,null,Computer,2,Master card,Quiz}  
+{Chess,null,Computer,2,Master card,-}  
+{Chess,null,Computer,2,American express,Quiz}  
+{Chess,null,Computer,2,American express,-}  
+{Chess,null,Computer,3,Visa,Quiz}  
+{Chess,null,Computer,3,Visa,-}  
+{Chess,null,Computer,3,Master card,Quiz}  
+{Chess,null,Computer,3,Master card,-}  
+{Chess,null,Computer,3,American express,Quiz}  
+{Chess,null,Computer,3,American express,-} 
+@
+Results for a maximum of 192 combinations

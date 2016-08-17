@@ -1,0 +1,10 @@
+eachChoice
+#
+A,valueA1, valueA2
+B,Boat, GrandBoat
+#
+{valueA1,Boat}
+{valueA2,GrandBoat}
+@
+Results for a maximum of 4 combinations 
+

@@ -1,0 +1,5 @@
+*.class
+*.prefs
+target/classes/META-INF/maven/uy.com.abstracta/CTWebLogic/pom.properties
+test-output/
+/target/

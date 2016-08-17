@@ -1,0 +1,17 @@
+eachChoice
+#
+Color,White,Green,Yellow,Black
+Car Brand,BMW,Mercedez,Volkswagen,KIA
+Country,Uruguay,Brasil,Argentina
+Continent,Asia,South America
+Capital, Montevideo, Brasilia
+Languages, Spanish,Portuguese,English,French
+University,Udelar,UFRJ,UCU,UCA,ORT
+#
+{White,BMW,Uruguay,Asia,Montevideo,Spanish,Udelar}
+{Green,Mercedez,Brasil,South America,Brasilia,Portuguese,UFRJ}
+{Green,KIA,Uruguay,Asia,Montevideo,English,ORT}
+{Yellow,Volkswagen,Argentina,South America,Brasilia,English,UCU}
+{Black,KIA,Argentina,South America,Montevideo,French,UCA}
+@
+Results for a maximum of 3840 combinations
