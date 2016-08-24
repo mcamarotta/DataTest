@@ -18,8 +18,13 @@ $("#btnExecuteStepOne").on("click", function(){ executeStepOne(); });
 }
 
 function executeStepOne(){
-	postRequest('mock/eachchoice.json', buildRequestJson(), function(data, status){
-		console.log(status);
+	//TODO: Make a post request to the real service
+	// postRequest('ServiceUrl', buildRequestJson(), function(data, status){
+	// 	console.log(status);
+	// });
+
+	getRequest('mock/eachchoice.json', null, function(data, status){
+		console.log(data);
 	});
 }
 
