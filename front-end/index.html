@@ -62,8 +62,8 @@
 
     <!-- Page Content -->
     <div class="container">
-        <div class="row">
 
+        <div class="row">
             <div class="col-md-12">
                <div class="form-group col-md-3 ">
                 <label>Select an algorithm</label>
@@ -97,9 +97,11 @@
                   </tbody>
               </table>  
 
+              <button id="btnExecuteStepOne" class="btn btn-default">Execute</button>
+
           </div>
           <div id="page2" class="hidden">
-            bbbbbb
+            <button onclick="getRequest('http://localhost:', data, callback)"></button>
         </div>
         <div id="page3" class="hidden">
             111111111
@@ -110,6 +112,8 @@
     </div>
 </div>
 
+
+
 </div>
 <!-- /.container -->
 
@@ -119,8 +123,13 @@
 <!-- Bootstrap Core JavaScript -->
 <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
 
+<!-- Request Helpers -->
+<script src="js/requests.js"></script>
+
+<!-- Table Variables Logic -->
 <script src="js/variablesLogic.js"></script>
 
+<!-- Application core -->
 <script src="js/app.js"></script>
 
 
