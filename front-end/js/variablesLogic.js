@@ -11,16 +11,25 @@ function initVariablesLogic(){
 		]		
 	};
 
-	updateHtmlTable();
+	updateTableVariables();
 
 }
 
 // Bind to Table
 
-function updateHtmlTable(){
+function updateTableVariables(){
 	var table = $("#tblVariables");
 	$(table).find("thead").html(getHtmlHeader());	
 	$(table).find("tbody").html(getHtmlRows());
+	$(table).find("tfoot tr td").attr('colspan',ourTable.header.length);
+	$(table).find("tfoot tr td").text( ourTable.header.length + ' variables x ' + ourTable.rows.length + ' rows');
+
+	$('#btnRemoveCol').attr('disabled', ourTable.header.length == 0 ? 'disabled' : false );
+	$('#btnRemoveRow').attr('disabled', ourTable.rows.length == 0 ? 'disabled' : false );
+}
+
+function clearVariables(){
+	initVariablesLogic();
 }
 
 function updateModel(rowId, colId, value){
@@ -34,16 +43,14 @@ function updateModel(rowId, colId, value){
 
 function addRow(){
 	this.ourTable.rows.push(this.getNewRow());
-	updateHtmlTable();
+	updateTableVariables();
 }
 
 function deleteRow(){
 	if (this.ourTable.rows.length > 0){
 		this.ourTable.rows.pop();
-		updateHtmlTable();
-	}
-	else
-		alert('Paraaa');
+		updateTableVariables();
+	}	
 
 }
 
@@ -52,7 +59,7 @@ function addColumn(){
 	for(var rowIndex in this.ourTable.rows){
 		this.ourTable.rows[rowIndex].columns.push("");
 	}
-	updateHtmlTable();
+	updateTableVariables();
 }
 
 function deleteColumn(){
@@ -63,7 +70,7 @@ function deleteColumn(){
 				this.ourTable.rows[rowIndex].columns.pop();
 			}
 		}
-		updateHtmlTable();
+		updateTableVariables();
 	}
 }
 

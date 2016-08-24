@@ -1,5 +1,7 @@
 function getRequest(url, data, callback){
-	   $.get(url, data, function(data, status){
+	var currentdate = new Date(); 
+	var nocache = currentdate.getSeconds();
+	   $.get(url + '?nocache=' + nocache, data, function(data, status){
 	   	console.log('a');
         callback(data, status);
     });

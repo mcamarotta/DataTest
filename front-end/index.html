@@ -65,9 +65,9 @@
 
         <div class="row">
             <div class="col-md-12">
-             <div class="form-group col-md-3 ">
+               <div class="form-group col-md-3 ">
                 <label>Select an algorithm</label>
-                <select class="form-control">
+                <select class="form-control" id="ddlAlgorithms">
                     <option value="1" selected>Each choice</option>
                     <option value="2">All combinations</option>
                     <option value="3">Simple Pairwise</option>
@@ -90,32 +90,50 @@
               <button class="btn btn-danger btn-sm" id="btnRemoveRow"> <span class="glyphicon glyphicon-remove"></span> Remove row </button>
               <button class="btn btn-primary btn-sm" id="btnAddCol"> <span class="glyphicon glyphicon-plus"></span> Add column </button>
               <button class="btn btn-danger btn-sm" id="btnRemoveCol"> <span class="glyphicon glyphicon-remove"></span> Remove column </button>
+
+              <button class="btn btn-default btn-sm" id="btnClear"> <span class="glyphicon glyphicon-refresh"></span> Reset </button>
               <table id="tblVariables" class="table table-responsive table-striped">
                   <thead>
-                  </thead>
-                  <tbody>
-                  </tbody>
-              </table>  
-
-              <button id="btnExecuteStepOne" class="btn btn-default">Execute</button>
-
-          </div>
-          <div id="page2" class="">
-             <h3>Algorithm <span id="algotithmName">Blablabla</span></h3>
-            <table id="tblResults" class="table table-responsive table-striped">
-                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th style="width:100%;">Results</th>
+                    </tr>
                 </thead>
                 <tbody>
-                </tbody><tbody>
-            </table>
-          </div>
-          <div id="page3" class="hidden">
-            111111111
-        </div>
-        <div id="page4" class="hidden">
-            0000
-        </div>
-    </div>
+                </tbody>
+                <tfoot align="center" class="alert alert-info">
+                  <tr>
+                      <td colspan="0">
+
+                      </td>
+                  </tr>
+              </tfoot>                  
+          </table>  
+
+          <button id="btnExecuteStepOne" class="btn btn-default">Execute</button>
+
+      </div>
+      <div id="page2" class="">
+       <h3>Algorithm <span id="algorithmName"></span></h3>
+       <table id="tblResults" class="table table-responsive table-striped">
+        <thead>                    
+        </thead>
+        <tbody>
+        </tbody>
+        <tfoot align="center" class="alert alert-info">
+            <tr>
+                <td colspan=2 id="tdResultsFooter"></td>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+<div id="page3" class="hidden">
+    111111111
+</div>
+<div id="page4" class="hidden">
+    0000
+</div>
+</div>
 </div>
 
 
@@ -134,6 +152,9 @@
 
 <!-- Table Variables Logic -->
 <script src="js/variablesLogic.js"></script>
+
+<!-- Table Results Logic -->
+<script src="js/resultsLogic.js"></script>
 
 <!-- Application core -->
 <script src="js/app.js"></script>

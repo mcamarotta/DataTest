@@ -6,6 +6,7 @@ $(document).ready(function(){initPage();});
 function initPage(){
    // 
    initVariablesLogic();
+   initResultsLogic();
 
 
 //Event handlers
@@ -13,7 +14,9 @@ $("#btnAddRow").on("click", function(){ addRow(); });
 $("#btnRemoveRow").on("click", function(){ deleteRow(); });
 $("#btnAddCol").on("click", function(){ addColumn(); });
 $("#btnRemoveCol").on("click", function(){ deleteColumn(); });
+$("#btnClear").on("click", function(){ clearVariables(); });
 $("#btnExecuteStepOne").on("click", function(){ executeStepOne(); });
+
 
 }
 
@@ -23,8 +26,10 @@ function executeStepOne(){
 	// 	console.log(status);
 	// });
 
+
+
 	getRequest('mock/eachchoice.json', null, function(data, status){
-		console.log(data);
+		setResults(data);
 	});
 }
 
