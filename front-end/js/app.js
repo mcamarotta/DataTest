@@ -4,7 +4,11 @@ $(document).ready(function(){initPage();});
 
 
 function initPage(){
-   // 
+	//HTML elements logic
+	//Dropdown Algorithms
+	buildAlgorithmsDropdown();
+
+   // Init other pages
    initVariablesLogic();
    initResultsLogic();
 
@@ -26,9 +30,7 @@ function executeStepOne(){
 	// 	console.log(status);
 	// });
 
-
-
-	getRequest('mock/eachchoice.json', null, function(data, status){
+	getRequest(getAlgorithmUrl(), null, function(data, status){
 		setResults(data);
 	});
 }
@@ -45,6 +47,23 @@ function buildRequestJson(){
 	}	
 	return dataToSend;
 }
+
+
+function buildAlgorithmsDropdown(){
+	for(var i in algorithms){
+		$('#ddlAlgorithms').append('<option value='+algorithms[i].id+'>'+algorithms[i].name+'</option>');
+	}	
+}
+
+function getAlgorithmUrl(){
+	var selectedAlgorithm = $('#ddlAlgorithms').val();
+
+	for(var i in algorithms){
+		if (algorithms[i].id == selectedAlgorithm)
+			return algorithms[i].url;
+	}
+}
+
 
 
 
