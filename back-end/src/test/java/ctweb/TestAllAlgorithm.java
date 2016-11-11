@@ -35,8 +35,8 @@ public class TestAllAlgorithm {
 	public static Object[][] setUpDataForTests() throws Exception {
 
 		//reading all the files on the files test directories. This directory has one level of tree. 
-		//TODO:Cambiar el absolutpath para uno relativo
-		ArrayList<Path> files = getFiles(Paths.get("C:/Users/Michel/workspace/CTWebLogic/src/test/resources/testGoodFiles"));
+	
+		ArrayList<Path> files = getFiles(Paths.get("./src/test/resources/testGoodFiles"));
 		
 		
 		if(files == null || files.isEmpty())
