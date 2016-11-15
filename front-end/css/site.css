@@ -1,3 +1,25 @@
+
+body{
+	padding-top: 70px;
+	/* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
 td > input{
 	padding:3px;
 }
+
+.areasContainer{
+	height:450px; 
+	overflow:scroll;
+}
+
+#sidebarNavigation a{
+	transition: background-color .15s linear;
+	-moz-transition: background-color .15s linear;
+	-webkit-transition: background-color .15s linear;
+	cursor: default;
+}
+
+table 
+
+
+  

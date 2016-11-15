@@ -2,163 +2,142 @@
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <meta name="author" content="">
-
+    <meta name="author" content="Michel Camarotta">
     <title>Data Test</title>
-
     <!-- Bootstrap Core CSS -->
     <link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
     <link href="css/site.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <style>
-        body {
-            padding-top: 70px;
-            /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
-        }
-    </style>
-
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
+</head>
 
-    </head>
-
-    <body>
-
-        <!-- Navigation -->
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            <div class="container">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">Data Test</a>
-                </div>
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
-                    <!--<li>
-                        <a href="#">About</a>
-                    </li> -->
-                </ul>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Data Test</a>
             </div>
-            <!-- /.navbar-collapse -->
         </div>
-        <!-- /.container -->
     </nav>
-
     <!-- Page Content -->
-    <div class="container">
 
-        <div class="row">
-            <div class="col-md-12">
-               <div class="form-group col-md-3 ">
-                <label>Select an algorithm</label>
-                <select class="form-control" id="ddlAlgorithms">
-                </select>
+    <div class="container">
+        <div class="col-md-3">
+            <!--Sidebar-->
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h4>You are here:</h4>
+                    <hr />
+                    <ul class="list-group" id="sidebarNavigation">
+                        <a href="#areaAlgorithm" class="list-group-item active">Algorithm</a>
+                        <a href="#areaVariables" class="list-group-item">Variables</a>
+                        <a href="#areaPairs" class="list-group-item">Pairs</a>
+                        <a href="#areaResults" class="list-group-item">Results</a>
+                    </ul>
+                </div>
             </div>
         </div>
-        <div class="col-md-3 " >    
-            <ul class="nav nav-pills nav-stacked">
-                <li role="presentation" class="active"><a href="#page1">Insert data</a></li>
-                <li role="presentation"><a href="#page2">Choose pairs</a></li>
-                <li role="presentation"><a href="#page3">Results</a></li>
-            </ul>
+        <div class="col-md-9">
+            <!--Main panel-->
+            <div class="panel panel-default">
+                <div class="areasContainer">
+                    <!--Areas - Panel Bodys-->
+                    <div id="areaAlgorithm" class="panel-body areaStep">
+                        <h4>Select an algorithm</h4>
+                        <hr />
+                        <select class="form-control" id="ddlAlgorithms"></select>
+                    </div>
+                    <div id="areaVariables" class="panel-body areaStep" style="display:none;">
+                        <h4>Configure your variables</h4>
+                        <hr />
+                        <div class="btn-toolbars">
+                            <div class="btn-group">
+                                <button class="btn btn-default btn-sm" id="btnAddRow"> <span class="glyphicon glyphicon-plus"></span> Add row </button>
+                                <button class="btn btn-default btn-sm" id="btnRemoveRow"> <span class="glyphicon glyphicon-remove"></span> Remove row </button>
+                            </div>
+                            <div class="btn-group">
+                                <button class="btn btn-default btn-sm" id="btnAddCol"> <span class="glyphicon glyphicon-plus"></span> Add column </button>
+                                <button class="btn btn-default btn-sm" id="btnRemoveCol"> <span class="glyphicon glyphicon-remove"></span> Remove column </button>
+                            </div>
+                            <button class="btn btn-default btn-sm" id="btnClear"> <span class="glyphicon glyphicon-refresh"></span> Reset </button>
+                        </div>
+                        <table id="tblVariables" class="table table-responsive table-striped">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th style="width:100%;">Results</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                            <tfoot align="center" class="alert alert-info">
+                                <tr>
+                                    <td colspan="0">
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    <div id="areaPairs" class="panel-body areaStep" style="display:none;">
+                        aaaa
+                    </div>
+                    <div id="areaResults" class="panel-body areaStep" style="display:none;">
+                        <h3>Algorithm <span id="algorithmName"></span></h3>
+                        <table id="tblResults" class="table table-responsive table-striped">
+                            <thead>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                            <tfoot align="center" class="alert alert-info">
+                                <tr>
+                                    <td colspan=2 id="tdResultsFooter"></td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <div class="row">
+                        <div class="col-md-6 text-left">
+                            <button id="btnBack" class="btn btn-default">Back</button>
+                        </div>
+                        <div class="col-md-6 text-right">
+                            <button id="btnNext" class="btn btn-default">Next</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-md-9 ">
-            <div id="page1">
+    </div>
+</body>
 
-              <h3>Insert data</h3>
-              <button class="btn btn-primary btn-sm" id="btnAddRow"> <span class="glyphicon glyphicon-plus"></span> Add row </button>
-              <button class="btn btn-danger btn-sm" id="btnRemoveRow"> <span class="glyphicon glyphicon-remove"></span> Remove row </button>
-              <button class="btn btn-primary btn-sm" id="btnAddCol"> <span class="glyphicon glyphicon-plus"></span> Add column </button>
-              <button class="btn btn-danger btn-sm" id="btnRemoveCol"> <span class="glyphicon glyphicon-remove"></span> Remove column </button>
-
-              <button class="btn btn-default btn-sm" id="btnClear"> <span class="glyphicon glyphicon-refresh"></span> Reset </button>
-              <table id="tblVariables" class="table table-responsive table-striped">
-                  <thead>
-                    <tr>
-                        <th>#</th>
-                        <th style="width:100%;">Results</th>
-                    </tr>
-                </thead>
-                <tbody>
-                </tbody>
-                <tfoot align="center" class="alert alert-info">
-                  <tr>
-                      <td colspan="0">
-
-                      </td>
-                  </tr>
-              </tfoot>                  
-          </table>  
-
-          <button id="btnExecuteStepOne" class="btn btn-default">Execute</button>
-
-      </div>
-      <div id="page2" class="">
-       <h3>Algorithm <span id="algorithmName"></span></h3>
-       <table id="tblResults" class="table table-responsive table-striped">
-        <thead>                    
-        </thead>
-        <tbody>
-        </tbody>
-        <tfoot align="center" class="alert alert-info">
-            <tr>
-                <td colspan=2 id="tdResultsFooter"></td>
-            </tr>
-        </tfoot>
-    </table>
-</div>
-<div id="page3" class="hidden">
-    111111111
-</div>
-<div id="page4" class="hidden">
-    0000
-</div>
-</div>
-</div>
-
-
-
-</div>
 <!-- /.container -->
-
 <!-- jQuery Version 1.11.1 -->
 <script src="node_modules/jquery/dist/jquery.js"></script>
-
 <!-- Bootstrap Core JavaScript -->
 <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
-
+<!-- Config || Global ||Shared-->
+<script src="js/config.js"></script>
+<!-- Algorithms logic -->
 <script src="js/algorithms.js"></script>
-
 <!-- Request Helpers -->
 <script src="js/requests.js"></script>
-
 <!-- Table Variables Logic -->
-<script src="js/variablesLogic.js"></script>
-
+<script src="js/variables.js"></script>
 <!-- Table Results Logic -->
-<script src="js/resultsLogic.js"></script>
-
+<script src="js/results.js"></script>
+<!-- Logic -->
+<script src="js/logic.js"></script>
 <!-- Application core -->
 <script src="js/app.js"></script>
-
-
-
-</body>
 
 </html>

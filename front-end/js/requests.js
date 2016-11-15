@@ -1,20 +1,25 @@
-var urlBase = 'http://localhost:8080/front-end/';
+function Requests(config) {
+	this.config = config;
+	this.defaultReturn = { "status": 0, "data": {} };
+};
 
-function getRequest(partialUrl, data, callback){
-	var url = urlBase + partialUrl;
-	var currentdate = new Date(); 
+Requests.prototype.getRequest = function (partialUrl, data, callback) {
+	var url = this.config.urlBase + partialUrl;
+	var currentdate = new Date();
 	var nocache = currentdate.getSeconds();
 	console.log('Get Request in: ' + url);
-	$.get(url + '?nocache=' + nocache, data, function(data, status){
-		console.log('a');
-		callback(data, status);
+	var promise = $.get(url + '?nocache=' + nocache, data);
+	promise.done(function (data) {
+		callback(data, 200);
+	}).fail(function (message) {
+		callback({ "message": "We couldn't access the algorithm url." }, 404);
 	});
-}
+};
 
-function postRequest(partialUrl, data, callback){
-	var url = urlBase + partialUrl;
-	console.log('Post Request in: ' + url);
-	$.post(url, data, function(data, status){
+Requests.prototype.postRequest = function (partialUrl, data, callback) {
+	var url = this.config.urlBase + partialUrl;
+	('Post Request in: ' + url);
+	$.post(url, data, function (data, status) {
 		callback(data, status);
 	});
-}
+};

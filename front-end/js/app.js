@@ -1,69 +1,74 @@
+$(document).ready(function () {
 
-$(document).ready(function(){initPage();});
-
-
-
-function initPage(){
-	//HTML elements logic
-	//Dropdown Algorithms
-	buildAlgorithmsDropdown();
-
-   // Init other pages
-   initVariablesLogic();
-   initResultsLogic();
-
-
-//Event handlers
-$("#btnAddRow").on("click", function(){ addRow(); });
-$("#btnRemoveRow").on("click", function(){ deleteRow(); });
-$("#btnAddCol").on("click", function(){ addColumn(); });
-$("#btnRemoveCol").on("click", function(){ deleteColumn(); });
-$("#btnClear").on("click", function(){ clearVariables(); });
-$("#btnExecuteStepOne").on("click", function(){ executeStepOne(); });
-
-
-}
-
-function executeStepOne(){
-	//TODO: Make a post request to the real service
-	// postRequest('ServiceUrl', buildRequestJson(), function(data, status){
-	// 	console.log(status);
-	// });
-
-	getRequest(getAlgorithmUrl(), null, function(data, status){
-		setResults(data);
+	$(function () {
+		$('a[href*="#"]:not([href="#"])').click(function () {
+			if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+				var target = $(this.hash);
+				target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+				if (target.length) {
+					$('#areasContainer').animate({
+						scrollTop: target.offset().top
+					}, 1000);
+					return false;
+				}
+			}
+		});
 	});
-}
 
-function buildRequestJson(){
-	var dataToSend = [];
-	// Loop table rows
-	for(var headerItem in ourTable.header){
-		dataToSend.push({"values" : [], "variableName" : ourTable.header[headerItem] } );
+	initPage();
+	var config;
+	var variables;
+	var algorithms;
+	var results;
+	var requests;
+	var logic;
 
-		for(var row in ourTable.rows){
-			dataToSend[headerItem].values.push(ourTable.rows[row].columns[headerItem]);
+	///Start the application flow
+	function initPage() {
+		//Init logic instances
+		config = new Config();
+		variables = new Variables($('#tblVariables'), $("#btnAddCol"), $("#btnRemoveCol"), $("#btnAddRow"), $("#btnRemoveRow"));
+		results = new Results($('#tblResults'));
+		algorithms = new Algorithms(config);
+		requests = new Requests(config);
+		logic = new Logic(config, algorithms, results, variables, requests);
+
+		//Dropdown Algorithms
+		algorithms.buildDropDown($('#ddlAlgorithms'));
+		if (algorithms.getAlgorithm($('#ddlAlgorithms')).usePairs === true)
+			$($("#sidebarNavigation a")[2]).show();
+		else
+			$($("#sidebarNavigation a")[2]).hide();
+
+		// Init the variables logic (first step)   		   		
+		variables.updateTableVariables();
+
+		//Create event handlers
+		handleEvents();
+
+	};
+
+	function buildRequestJson() {
+		var dataToSend = [];
+		// Loop table rows
+		for (var headerItem in ourTable.header) {
+			dataToSend.push({ "values": [], "variableName": ourTable.header[headerItem] });
+
+			for (var row in ourTable.rows) {
+				dataToSend[headerItem].values.push(ourTable.rows[row].columns[headerItem]);
+			}
 		}
-	}	
-	return dataToSend;
-}
+		return dataToSend;
+	};
 
-
-function buildAlgorithmsDropdown(){
-	for(var i in algorithms){
-		$('#ddlAlgorithms').append('<option value='+algorithms[i].id+'>'+algorithms[i].name+'</option>');
-	}	
-}
-
-function getAlgorithmUrl(){
-	var selectedAlgorithm = $('#ddlAlgorithms').val();
-
-	for(var i in algorithms){
-		if (algorithms[i].id == selectedAlgorithm)
-			return algorithms[i].url;
-	}
-}
-
-
-
-
+	function handleEvents() {
+		//Event handlers
+		$("#btnAddRow").on("click", function () { variables.addRow(); });
+		$("#btnRemoveRow").on("click", function () { variables.deleteRow(); });
+		$("#btnAddCol").on("click", function () { variables.addColumn(); });
+		$("#btnRemoveCol").on("click", function () { variables.deleteColumn(); });
+		$("#btnClear").on("click", function () { variables.reset(); });
+		$("#btnNext").on("click", function () { logic.next(); });
+		$("#btnBack").on("click", function () { logic.back(); });
+	};
+});
