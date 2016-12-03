@@ -18,8 +18,16 @@ Requests.prototype.getRequest = function (partialUrl, data, callback) {
 
 Requests.prototype.postRequest = function (partialUrl, data, callback) {
 	var url = this.config.urlBase + partialUrl;
-	('Post Request in: ' + url);
-	$.post(url, data, function (data, status) {
+	console.log('Data posted in ' + url + ': ');
+	console.log(data);
+	$.ajax(url, {
+    data : JSON.stringify(data),
+    contentType : 'application/json',
+    type : 'POST'})
+	.then(function(data, status){
+		console.log("Request returned with status: " + "[ " + status + " ] :");
+		if (status === "success") console.log(data);
 		callback(data, status);
 	});
+
 };

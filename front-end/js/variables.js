@@ -5,9 +5,9 @@ function Variables(htmlTable, btnAddCol, btnRemoveCol, btnAddRow, btnRemoveRow) 
 		return {
 			"header": ["1", "2", "3", "4"],
 			"rows": [{ "columns": ["1A", "2A", "3A", "4A"] },
-				{ "columns": ["1B", "2B", "3B", "4B"] },
-				{ "columns": ["1C", "2C", "3C", "4C"] },
-				{ "columns": ["1D", "2D", "3D", "4D"] }]
+			{ "columns": ["1B", "2B", "3B", "4B"] },
+			{ "columns": ["1C", "2C", "3C", "4C"] },
+			{ "columns": ["1D", "2D", "3D", "4D"] }]
 		};
 	};
 
@@ -113,7 +113,10 @@ Variables.prototype.getJson = function () {
 	var dataToSend = [];
 	// Loop table rows
 	for (var headerItem in this.ourTable.header) {
-		dataToSend.push({ "values": [], "variableName": this.ourTable.header[headerItem] });
+		dataToSend.push({
+			"variableName": this.ourTable.header[headerItem],
+			"values": []
+		});
 
 		for (var row in this.ourTable.rows) {
 			dataToSend[headerItem].values.push(this.ourTable.rows[row].columns[headerItem]);

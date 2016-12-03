@@ -4,12 +4,12 @@ function Config() {
 	/// 3 = Simple pairwise
 	/// 4 = Prow
 	this.algorithms =
-		[	{ "id": 1, "name": "Each choice", "url": "mock/eachchoice.json" },
+		[	{ "id": 1, "name": "Each choice", "url": "getEachChoice" },
 			{ "id": 2, "name": "All combinataions", "url": "getAllCombination" },
 			{ "id": 3, "name": "Simple pairwise", "url": "getSimplePairWise", "usePairs" : true },
 			{ "id": 4, "name": "Prow", "url": 'NOT IMPLEMENTED' }];
 
-	this.urlBase = 'http://localhost:8080/';
+	this.urlBase = 'http://localhost:8080/rest/services/';
 
 	this.animationDuration = 100;
 };

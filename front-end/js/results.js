@@ -9,7 +9,7 @@ Results.prototype.setResults = function(results){
 	this.updateTableResults();
 };
 
-Results.prototype.updateTableResults = function(){
+Results.prototype.updateTableResults = function(){	
 	var tblResults = this.tblResults;
 	var htmlBody = '';
 	for(var i in this.objResults){			

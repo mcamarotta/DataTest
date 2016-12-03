@@ -22,8 +22,8 @@ Logic.prototype.showError = function(message, callback){
 Logic.prototype.proccess = function () {
     var me = this;
 
-    this.requests.getRequest(this.algorithms.getAlgorithm($('#ddlAlgorithms')).url, this.variables.getJson(), function (data, status) {
-        if (status != 200){
+    this.requests.postRequest(this.algorithms.getAlgorithm($('#ddlAlgorithms')).url, this.variables.getJson(), function (data, status) {
+        if (status < 200 || status > 299){
             me.showError(data.message);
             return;
         }
