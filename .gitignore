@@ -4,3 +4,10 @@ services/.settings/org.eclipse.wst.ws.service.policy.prefs
 services/.metadata/WebContent/WEB-INF/faces-config.pageflow
 services/.settings/org.eclipse.core.resources.prefs
 services/.settings/org.eclipse.wst.common.project.facet.core.prefs.xml
+back-end/.settings/
+back-end/.classpath
+services/.classpath
+services/.gitignore
+services/.project
+services/.settings/org.eclipse.wst.common.component
+services/.settings/org.eclipse.wst.common.project.facet.core.xml
