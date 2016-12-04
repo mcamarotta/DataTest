@@ -21,9 +21,6 @@ import handler.handlerCombinationCTWebNewLogic;
 
 
 
-
-
-
 @Path("services")
 public class CTWebServices {
 
@@ -53,7 +50,7 @@ public class CTWebServices {
     	variableAndValues.add(var2);
     	
     	
-    	ArrayList<DataCombination> combinationResponse = handlerCombinationCTWebNewLogic.getPairWiseCombinationWithSimplePairWise(variableAndValues);
+    	ArrayList<DataCombination> combinationResponse = handlerCombinationCTWebNewLogic.getPairWiseCombinationWithSimplePairWise(variableAndValues2);
     	
     	return combinationResponse;
     }
@@ -80,7 +77,7 @@ public class CTWebServices {
     	variableAndValues.add(var2);
     	
     	
-    	ArrayList<DataCombination> combinationResponse = handlerCombinationCTWebNewLogic.getPairWiseCombinationWithEachChoice(variableAndValues);
+    	ArrayList<DataCombination> combinationResponse = handlerCombinationCTWebNewLogic.getPairWiseCombinationWithEachChoice(variableAndValues2);
     	
     	return combinationResponse;
     }
@@ -90,51 +87,21 @@ public class CTWebServices {
     @Consumes(MediaType.APPLICATION_JSON)
     public  ArrayList<DataCombination> getPairWiseCombinationWithAllCombination(ArrayList<DataVariableAndValues> variableAndValues2) {
         
-    	ArrayList<DataVariableAndValues> variableAndValues = new ArrayList<DataVariableAndValues>();
+    	   	
     	
-    	ArrayList<String> values1= new ArrayList<>();
-    	values1.add("ValueVar11");
-    	values1.add("ValueVar12");
-    	DataVariableAndValues var1= new DataVariableAndValues("Var1",values1 );
-    	variableAndValues.add(var1);
-    	
-    	ArrayList<String> values2= new ArrayList<>();
-    	values2.add("ValueVar21");
-    	values2.add("ValueVar22");
-    	DataVariableAndValues var2= new DataVariableAndValues("Var1",values2 );
-    	
-    	variableAndValues.add(var2);
-    	
-    	
-    	ArrayList<DataCombination> combinationResponse = handlerCombinationCTWebNewLogic.getPairWiseCombinationWithAllCombination(variableAndValues);
+    	ArrayList<DataCombination> combinationResponse = handlerCombinationCTWebNewLogic.getPairWiseCombinationWithAllCombination(variableAndValues2);
     	
     	return combinationResponse;
     }
 	
-	
 	@POST
-    @Path("testJSONVariableAndValuesPassing")
+    @Path("getProwCombinationStep1")
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
-    public  ArrayList<DataCombination> test2(ArrayList<DataVariableAndValues> variableAndValues) {
+    public  ArrayList<DataCombination> getPairWiseCombinationWithProwStep1(ArrayList<DataVariableAndValues> variableAndValues2) {
         
-//    	ArrayList<DataVariableAndValues> variableAndValues = new ArrayList<DataVariableAndValues>();
-    	
-//    	ArrayList<String> values1= new ArrayList<>();
-//    	values1.add("ValueVar11");
-//    	values1.add("ValueVar12");
-//    	DataVariableAndValues var1= new DataVariableAndValues("Var1",values1 );
-//    	variableAndValues.add(var1);
-//    	
-//    	ArrayList<String> values2= new ArrayList<>();
-//    	values2.add("ValueVar21");
-//    	values2.add("ValueVar22");
-//    	DataVariableAndValues var2= new DataVariableAndValues("Var1",values2 );
-//    	
-//    	variableAndValues.add(var2);
-    	
-    	
-    	ArrayList<DataCombination> combinationResponse = handlerCombinationCTWebNewLogic.getPairWiseCombinationWithSimplePairWise(variableAndValues);
+    	  	
+    	ArrayList<DataCombination> combinationResponse = handlerCombinationCTWebNewLogic.getPairWiseCombinationWithProwFirstStep(variableAndValues2);
     	
     	return combinationResponse;
     }
