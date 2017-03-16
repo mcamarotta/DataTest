@@ -8,6 +8,6 @@ package datatypes;
  */
 public enum EnumAlgorithmNames {
 	
-	allCombinations, eachChoice, simplePairwise, prow
+	allCombinations, eachChoice, simplePairwise, prowStep1, prowStep2
 
 }

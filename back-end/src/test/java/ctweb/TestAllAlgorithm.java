@@ -157,7 +157,7 @@ public class TestAllAlgorithm {
 		case simplePairwise:
 			combinations = handlerCombinationCTWebNewLogic.getPairWiseCombinationWithSimplePairWise(variableAndValues);
 			break;
-		case prow:
+		case prowStep1:
 			combinations = handlerCombinationCTWebNewLogic.getPairWiseCombinationWithProwFirstStep(variableAndValues);
 			break;
 			

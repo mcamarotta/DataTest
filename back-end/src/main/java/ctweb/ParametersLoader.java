@@ -27,7 +27,7 @@ public final class ParametersLoader {
 	    	set.setName(dataVariableAndValues.getVariableName());
 	    	ArrayList<String> values =dataVariableAndValues.getValues();
 	    	
-	    	//This is legacy code. this is need to inicialize the set
+	    	//This is legacy code. this is need to initialize the set
 	    	for (int i=0; i<values.size();i++)
 				set.add(new Element(""));
 	    	

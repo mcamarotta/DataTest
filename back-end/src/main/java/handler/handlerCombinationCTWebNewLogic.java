@@ -99,16 +99,37 @@ public final class handlerCombinationCTWebNewLogic {
 	 */
 	public static ArrayList<DataCombination> getPairWiseCombinationWithProwFirstStep(ArrayList<DataVariableAndValues> variableAndValues) {
 		
-		EnumAlgorithmNames algorithmName=EnumAlgorithmNames.prow;
+		EnumAlgorithmNames algorithmName=EnumAlgorithmNames.prowStep1;
 		
 		return getCombination(algorithmName,variableAndValues);
 
 	}
 
+	/**
+	 * This method receive a set of variables with different values and combine
+	 * them with algorithm SimplePairWise. Return back the combination of
+	 * variables received by parameter
+	 * Use for this the algorithm PROW - (Pairwise with Restrictions, Order and Weight) 
+	 * The Explanation of Algorithm: 
+	 * With the PROW algorithm you must: Execute the algorithm (Execute button) to see the pairs table. 
+	 * Secondly, select those pairs to be removed. 
+	 * Thirdly, assign a selection factor to those pairs you are more interested (just in case it is necessary to repeat pairs).
+	 * Finally, press again the Execute button to obtain the test cases.
+	 * 
+	 * @param variableAndValues
+	 * @return
+	 */
+	public static ArrayList<DataCombination> getPairWiseCombinationWithProwSecondStep(ArrayList<DataVariableAndValues> variableAndValues) {
+		
+		EnumAlgorithmNames algorithmName=EnumAlgorithmNames.prowStep2;
+		
+		return getCombination(algorithmName,variableAndValues);
+
+	}
 	
 	
 	/**
-	 * This intern method calculate the combinations of values given the variables and values and what algorithm you want to use.
+	 * This private method calculate the combinations of values given the variables and values and what algorithm you want to use.
 	 * 
 	 * @param algorithmName
 	 * @param variableAndValues
@@ -184,8 +205,12 @@ public final class handlerCombinationCTWebNewLogic {
 			return new EachChoiceAlgorithm();
 		if (algorithmName.equals(EnumAlgorithmNames.simplePairwise))
 			return new SimpleAllPairsAlgorithm();
-		if (algorithmName.equals(EnumAlgorithmNames.prow))
+		if (algorithmName.equals(EnumAlgorithmNames.prowStep1))
 			return new PROWAlgorithm();
+		if (algorithmName.equals(EnumAlgorithmNames.prowStep2)){
+			//TODO: verify if this algorithm is the right to use. Perhaps it is only to add the selectionFactors. 
+			return new PROWAlgorithm();
+		}
 		return new SimpleAllPairsAlgorithm();
 	}
 

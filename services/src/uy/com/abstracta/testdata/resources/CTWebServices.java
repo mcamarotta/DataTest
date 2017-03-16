@@ -1,10 +1,5 @@
 package uy.com.abstracta.testdata.resources;
 
-
-
-
-
-
 import java.util.ArrayList;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.POST;
@@ -66,6 +61,20 @@ public class CTWebServices {
         
     	  	
     	ArrayList<DataCombination> combinationResponse = handlerCombinationCTWebNewLogic.getPairWiseCombinationWithProwFirstStep(variableAndValues2);
+    	
+    	return combinationResponse;
+    }
+	
+	@POST
+    @Path("getProwCombinationStep2")
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
+    public  ArrayList<DataCombination> getPairWiseCombinationWithProwStep2(ArrayList<DataVariableAndValues> variableAndValues2) {
+        
+    	//TODO: Add new datatype with 4 values like the legacy tool in the second step of PROW. 
+		//It means DataVariableValuesWeightBooleanToRemove and add it on testDataBackEnd project as DataVariableAndValues
+		//
+    	ArrayList<DataCombination> combinationResponse = handlerCombinationCTWebNewLogic.getPairWiseCombinationWithProwSecondStep(variableAndValues2);
     	
     	return combinationResponse;
     }
