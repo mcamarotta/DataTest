@@ -116,6 +116,8 @@ Variables.prototype.getJson = function () {
 		dataToSend.push({
 			"variableName": this.ourTable.header[headerItem],
 			"values": []
+			//,"peso":[]
+			//,"remove":[]
 		});
 
 		for (var row in this.ourTable.rows) {
